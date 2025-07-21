@@ -5,7 +5,7 @@ Welcome to my personal portfolio website built using **React.js**. This site sho
 ## 🚀 Live Demo
 
 Check out the live portfolio here:  
-🔗 [https://Muthuprabhu2003.github.io/portfolio](https://Muthuprabhu2003.github.io/portfolio)
+🔗 [Portfolio]👉(https://muthuprabhu-portfolio.netlify.app/)👈
 
 ---
 
