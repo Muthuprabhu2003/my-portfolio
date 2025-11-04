@@ -1,4 +1,4 @@
-import React from 'react';
+,import React from 'react';
 import './App.css';
 
 const certificateData = [
@@ -41,6 +41,14 @@ const certificateData = [
   {
     title:'Network Basics in CISCO',
     url: 'https://www.netacad.com/certificates/?issuanceId=683b178d-6334-4ad9-945e-6b084f31fc12'
+  },
+  {
+    title:'Signal Processing Onramp using MATLAB',
+    url: 'https://matlabacademy.mathworks.com/progress/share/certificate.html?id=f4a7f683-008d-4f5b-9ae1-27650f540c97&'
+  },
+  {
+    title: 'Simulink Onramp using MATLAB',
+    url:'https://matlabacademy.mathworks.com/progress/share/certificate.html?id=f56311cf-7700-48db-8b79-f3dc9c1263dd&'
   }
 ];
 
