@@ -85,6 +85,17 @@ function Skills() {
             <div className="skills__bar skills__sql" data-width="70%"></div>
             <span className="skills__percentage">70%</span>
           </div>
+          <div className="skills__data">
+            <span className="skills__name"><i className='bx bx-data'></i> Cisco Packet Tracket</span>
+            <div className="skills__bar skills__sql" data-width="70%"></div>
+            <span className="skills__percentage">80%</span>
+          </div>
+          <div className="skills__data">
+            <span className="skills__name"><i className='bx bx-data'></i> MATLAb</span>
+            <div className="skills__bar skills__sql" data-width="70%"></div>
+            <span className="skills__percentage">90%</span>
+          </div>
+          
         </div>
       </div>
     </section>
