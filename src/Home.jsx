@@ -21,7 +21,7 @@ function Home() {
           Hi,<br />I'm <span className="home__title-color">Muthu Prabhu</span><br />
           <span style={{ color: '#007bff' }}>
             <Typewriter
-              words={['Web Designer', 'Data Analyst']}
+              words={['Web Designer', 'Data Analyst','Network Engineer']}
               loop={true}
               cursor
               cursorStyle="|"
