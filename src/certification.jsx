@@ -37,6 +37,10 @@ const certificateData = [
   {
     title: 'Course Completion Certificate - Python ',
     url: 'https://github.io/Muthuprabhu2003/certificates/blob/main/python.pdf',
+  },
+  {
+    title:'Network Basics in CISCO',
+    url: 'https://www.netacad.com/certificates/?issuanceId=683b178d-6334-4ad9-945e-6b084f31fc12'
   }
 ];
 
