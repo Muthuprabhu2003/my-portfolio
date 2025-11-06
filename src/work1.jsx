@@ -7,6 +7,7 @@ import work2 from './assets/images/project2.jpg';
 import work3 from './assets/images/project3.jpg';
 import work4 from './assets/images/project4.png';
 import work5 from './assets/images/project5.jpg';
+import work6 from './assets/images/project6.png';
 
 
 
@@ -40,6 +41,12 @@ const projects = [
     title: 'Weather App using Reactjs',
     image: work5,
     link: 'https://github.com/Muthuprabhu2003/weather-app',
+  },
+  {
+    id: 6,
+    title: 'WSN-Based Smart Parking System Simulation using MATLAB',
+    image: work6,
+    link: 'https://github.com/Muthuprabhu2003/WSN-Based-Smart-Parking-System-Simulation',
   }
   
 ];
