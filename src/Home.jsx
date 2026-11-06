@@ -9,67 +9,74 @@ import { Typewriter } from 'react-simple-typewriter';
 
 function Home() {
   useEffect(() => {
-    ScrollReveal().reveal('.home__data', { delay: 200, distance: '40px', origin: 'left' });
-    ScrollReveal().reveal('.home__img', { delay: 600, origin: 'right' });
+    ScrollReveal().reveal('.home__data', { delay: 200, distance: '50px', origin: 'left', easing: 'cubic-bezier(0.4,0,0.2,1)' });
+    ScrollReveal().reveal('.home__img', { delay: 500, distance: '50px', origin: 'right', easing: 'cubic-bezier(0.4,0,0.2,1)' });
+    ScrollReveal().reveal('.home__stat', { delay: 800, distance: '20px', origin: 'bottom', interval: 150 });
   }, []);
 
   return (
     <section className="home" id="home">
-      
+
       <div className="home__data">
+        <span className="home__greeting">✦ Available for Work</span>
+
         <h1 className="home__title">
-          Hi,<br />I'm <span className="home__title-color">Muthu Prabhu</span><br />
-          <span style={{ color: '#007bff' }}>
+          Hi, I'm<br />
+          <span className="home__title-color">Muthu Prabhu</span>
+        </h1>
+
+        <div className="home__typewriter">
+          <span>
             <Typewriter
-              words={['Web Designer', 'Data Analyst','Network Engineer']}
+              words={['.NET Developer', 'React Developer', 'Data Analyst', 'Web Designer', 'Network Engineer']}
               loop={true}
               cursor
               cursorStyle="|"
               typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1500}
+              deleteSpeed={45}
+              delaySpeed={1600}
             />
           </span>
-        </h1>
+        </div>
 
-        <a href="#contact" className="button">Contact</a>
+        <div className="home__btn-group">
+          <a href="#contact" className="button">Contact Me</a>
+          <a href="#work" className="button button-outline">View Projects</a>
+        </div>
 
         <div className="home__social">
-          <p>Follow me:</p>
-
-          <a
-            href="https://www.linkedin.com/in/muthu-prabhu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="home__social-icon"
-          >
-            <FiLinkedin /> LinkedIn
+          <p>Find me on</p>
+          <a href="https://www.linkedin.com/in/muthu-prabhu" target="_blank" rel="noopener noreferrer" className="home__social-icon" title="LinkedIn">
+            <FiLinkedin />
           </a>
-
-          <a
-            href="mailto:muthuprabhu2003mp@gmail.com"
-            className="home__social-icon"
-          >
-            <BiLogoGmail /> Mail
+          <a href="mailto:muthuprabhu2003mp@gmail.com" className="home__social-icon" title="Gmail">
+            <BiLogoGmail />
           </a>
-
-          <a
-            href="https://github.com/Muthuprabhu2003"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="home__social-icon"
-          >
-            <FaGithub /> GitHub
+          <a href="https://github.com/Muthuprabhu2003" target="_blank" rel="noopener noreferrer" className="home__social-icon" title="GitHub">
+            <FaGithub />
           </a>
+        </div>
+
+        <div className="home__stats">
+          <div className="home__stat">
+            <div className="home__stat-number">5+</div>
+            <div className="home__stat-label">Projects</div>
+          </div>
+          <div className="home__stat">
+            <div className="home__stat-number">5+</div>
+            <div className="home__stat-label">Work Exp</div>
+          </div>
+          <div className="home__stat">
+            <div className="home__stat-number">12+</div>
+            <div className="home__stat-label">Certifications</div>
+          </div>
         </div>
       </div>
 
       <div className="home__img">
-        <img 
-          src={profileImg} 
-          alt="Muthu Prabhu" 
-          className="profile-img" 
-        />
+        <div className="profile-img-wrapper">
+          <img src={profileImg} alt="Muthu Prabhu" className="profile-img" />
+        </div>
       </div>
     </section>
   );

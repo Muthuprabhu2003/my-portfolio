@@ -10,93 +10,69 @@ function Skills() {
         if (width) bar.style.width = width;
       });
     };
-
     ScrollReveal().reveal('.skills__content', {
-      delay: 200,
+      delay: 150,
       distance: '50px',
       origin: 'bottom',
-      interval: 200,
+      interval: 150,
+      easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
       afterReveal: animateBars,
     });
   }, []);
 
+  const frontendSkills = [
+    { icon: 'bxl-html5',    name: 'HTML',       pct: '95%' },
+    { icon: 'bxl-css3',     name: 'CSS',        pct: '90%' },
+    { icon: 'bxl-javascript', name: 'JavaScript', pct: '82%' },
+    { icon: 'bxl-react',    name: 'ReactJS',    pct: '85%' },
+  ];
+
+  const dotnetSkills = [
+    { icon: 'bx-code-alt',      name: 'C#',                      pct: '80%' },
+    { icon: 'bx-server',        name: 'ASP.NET Core / MVC',      pct: '78%' },
+    { icon: 'bx-data',          name: 'Web API & Entity Framework', pct: '75%' },
+    { icon: 'bx-code-block',    name: 'LINQ',                    pct: '75%' },
+  ];
+
+  const dataSkills = [
+    { icon: 'bxl-python',           name: 'Python',         pct: '75%' },
+    { icon: 'bx-analyse',           name: 'Data Analysis',  pct: '78%' },
+    { icon: 'bxs-bar-chart-square', name: 'Power BI',       pct: '75%' },
+    { icon: 'bxs-spreadsheet',      name: 'Excel',          pct: '85%' },
+  ];
+
+  const dbSkills = [
+    { icon: 'bx-data',         name: 'Microsoft SQL Server', pct: '78%' },
+    { icon: 'bx-data',         name: 'MySQL',                pct: '72%' },
+    { icon: 'bx-data',         name: 'MongoDB',              pct: '65%' },
+    { icon: 'bx-network-chart', name: 'Cisco Packet Tracer', pct: '80%' },
+  ];
+
+  const SkillGroup = ({ title, skills }) => (
+    <div className="skills__content">
+      <h3 className="skills__subtitle">{title}</h3>
+      {skills.map(({ icon, name, pct }) => (
+        <div className="skills__data" key={name}>
+          <span className="skills__name">
+            <span><i className={`bx ${icon}`}></i>{name}</span>
+            <span className="skills__percentage">{pct}</span>
+          </span>
+          <div className="skills__bar-track">
+            <div className="skills__bar" data-width={pct}></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <section className="skills section" id="skills">
-      <h2 className="section-title">Skills</h2>
-
+      <h2 className="section-title">Technical Skills</h2>
       <div className="skills__container bd-grid">
-        <div className="skills__content">
-          <h3 className="skills__subtitle">Frontend</h3>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxl-html5'></i> HTML</span>
-            <div className="skills__bar skills__html" data-width="95%"></div>
-            <span className="skills__percentage">95%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxl-css3'></i> CSS</span>
-            <div className="skills__bar skills__css" data-width="90%"></div>
-            <span className="skills__percentage">90%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxl-javascript'></i> JavaScript</span>
-            <div className="skills__bar skills__js" data-width="80%"></div>
-            <span className="skills__percentage">80%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxl-react'></i> React</span>
-            <div className="skills__bar skills__react" data-width="85%"></div>
-            <span className="skills__percentage">85%</span>
-          </div>
-        </div>
-
-        <div className="skills__content">
-          <h3 className="skills__subtitle">Data & Tools</h3>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxl-python'></i> Python</span>
-            <div className="skills__bar skills__python" data-width="75%"></div>
-            <span className="skills__percentage">75%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bx-analyse'></i> Data Analysis</span>
-            <div className="skills__bar skills__dataanalyst" data-width="70%"></div>
-            <span className="skills__percentage">70%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxs-spreadsheet'></i> Excel</span>
-            <div className="skills__bar skills__excel" data-width="85%"></div>
-            <span className="skills__percentage">85%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bxs-bar-chart-square'></i> Power BI</span>
-            <div className="skills__bar skills__powerbi" data-width="75%"></div>
-            <span className="skills__percentage">75%</span>
-          </div>
-
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bx-data'></i> SQL</span>
-            <div className="skills__bar skills__sql" data-width="70%"></div>
-            <span className="skills__percentage">70%</span>
-          </div>
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bx-data'></i> Cisco Packet Tracket</span>
-            <div className="skills__bar skills__sql" data-width="70%"></div>
-            <span className="skills__percentage">80%</span>
-          </div>
-          <div className="skills__data">
-            <span className="skills__name"><i className='bx bx-data'></i> MATLAb</span>
-            <div className="skills__bar skills__sql" data-width="70%"></div>
-            <span className="skills__percentage">90%</span>
-          </div>
-          
-        </div>
+        <SkillGroup title="Frontend" skills={frontendSkills} />
+        <SkillGroup title=".NET Stack" skills={dotnetSkills} />
+        <SkillGroup title="Data & Analytics" skills={dataSkills} />
+        <SkillGroup title="Databases & Tools" skills={dbSkills} />
       </div>
     </section>
   );
